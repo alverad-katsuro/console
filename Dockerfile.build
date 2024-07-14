@@ -64,7 +64,6 @@ COPY --from=gobuilder /go/src/github.com/openshift/console/bin/bridge /opt/bridg
 COPY --from=nodebuilder /home/app/frontend/public/dist /opt/bridge/static
 COPY --from=gobuilder /go/src/github.com/openshift/console/pkg/graphql/schema.graphql /pkg/graphql/schema.graphql
 
-WORKDIR /opt/bridge
 # doesn't require a root user.
 USER 1001
 
